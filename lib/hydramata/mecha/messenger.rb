@@ -13,7 +13,7 @@ module Hydramata
       end
 
       def each_actionable_message
-        message_container.each {|message| message.actionable? ? yield(message) : nil }
+        message_container.each {|message| yield(message) if message.actionable? }
         nil
       end
 
