@@ -1,5 +1,8 @@
 module Hydramata
   module Mecha
+    # Responsible for conveying a message #key and #attributes.
+    # The key and attributes can then be used for translation to various output
+    # buffers (i.e. user web page, json api).
     class Message
       def initialize(key, attrs = {}, collaborators = {})
         self.key = key.dup
